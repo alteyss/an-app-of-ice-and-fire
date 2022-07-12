@@ -1,0 +1,84 @@
+.card {
+    cursor: pointer;
+    box-shadow: #ddd 0 0 10px;
+    border-radius: 4px;
+    padding: space(2);
+    position: relative;
+
+    &.card--readonly {
+        cursor: default;
+    }
+
+    &:hover {
+        .card__image > div { 
+            transform: scale(1.1);
+        }
+    }
+
+    .card__image {
+        overflow: hidden;
+
+        & > div {
+            height: 30vh;
+            min-height: 300px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            border-radius: space(0.5);
+            transition: all 1s ease-in-out;
+        }
+    }
+
+    .card__details {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: space(0.5);
+        line-height: 1.2rem;
+        position: relative;
+        margin-top: space(1);
+        font-size: 1rem;
+
+        .card__name {
+            font-weight: bold;
+        }
+
+        .card__info {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+        }
+
+        .card__info--date {
+            font-style: italic;
+        }
+
+        .card__pages {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $text-light;
+            font-size: 0.8em;
+        }
+
+        .card__tag {
+            margin-top: space(1);
+
+            span {
+                color: #fff;
+                border-radius: space(0.5);
+                font-size: 0.9rem;
+                font-weight: bold;
+                padding: space(0.5);
+                background-color: $primary;
+            }
+        }
+
+        .card__link {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+        } 
+    }
+}

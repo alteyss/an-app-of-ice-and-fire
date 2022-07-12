@@ -1,0 +1,43 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: space(4) space(2);
+    margin: space(4) 0;
+}
+
+.list__button {
+    text-align: center;
+    margin: space(4) 0;
+
+    &.list__button--back {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .list {
+        padding: 0 space(1);
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .list__header {
+        padding: 0 space(1);
+    }
+
+    .list__button {
+        margin: space(4) space(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.loading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: space(5);
+}
